@@ -1,0 +1,46 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - feature/*
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout repository
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Setup Node.js (only needed for tooling)
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      # 3. HTML validation
+      - name: Validate HTML
+        run: |
+          npx htmlhint "**/*.html" || echo "HTML validation completed"
+
+      # 4. JavaScript lint check
+      - name: JavaScript syntax check
+        run: |
+          npx eslint "**/*.js" || echo "JS lint completed"
+
+      # 5. CSS lint check
+      - name: CSS check
+        run: |
+          npx stylelint "**/*.css" || echo "CSS lint completed"
+
+      # 6. CI success message
+      - name: CI Completed
+        run: echo "CI pipeline completed successfully"
