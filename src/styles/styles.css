@@ -82,3 +82,24 @@ li {
   align-items: center;
   gap: 10px;
 }
+
+
+li.completed span {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+li span {
+  flex: 1;
+}
+
+li button {
+  background: #ef4444;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  font-size: 14px;
+}
