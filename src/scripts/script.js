@@ -76,3 +76,26 @@ function updateCount() {
   const activeCount = todos.filter((todo) => !todo.completed).length;
   taskCount.textContent = `${activeCount} tasks left`;
 }
+
+filters.forEach((button) => {
+  button.addEventListener("click", () => {
+    filters.forEach((btn) => btn.classList.remove("active"));
+    button.classList.add("active");
+    currentFilter = button.dataset.filter;
+    renderTodos();
+  });
+});
+
+clearCompleted.addEventListener("click", () => {
+  todos = todos.filter((todo) => !todo.completed);
+  saveTodos();
+  renderTodos();
+});
+
+addBtn.addEventListener("click", addTodo);
+
+input.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") addTodo();
+});
+
+renderTodos();
