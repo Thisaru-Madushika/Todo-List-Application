@@ -71,3 +71,8 @@ function deleteTodo(id) {
   saveTodos();
   renderTodos();
 }
+
+function updateCount() {
+  const activeCount = todos.filter((todo) => !todo.completed).length;
+  taskCount.textContent = `${activeCount} tasks left`;
+}
