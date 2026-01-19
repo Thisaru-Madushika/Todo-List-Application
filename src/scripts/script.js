@@ -42,3 +42,32 @@ function renderTodos() {
 
   updateCount();
 }
+
+function addTodo() {
+  const text = input.value.trim();
+  if (!text) return;
+
+  todos.push({
+    id: Date.now(),
+    text,
+    completed: false,
+  });
+
+  input.value = "";
+  saveTodos();
+  renderTodos();
+}
+
+function toggleTodo(id) {
+  todos = todos.map((todo) =>
+    todo.id === id ? { ...todo, completed: !todo.completed } : todo
+  );
+  saveTodos();
+  renderTodos();
+}
+
+function deleteTodo(id) {
+  todos = todos.filter((todo) => todo.id !== id);
+  saveTodos();
+  renderTodos();
+}
