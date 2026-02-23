@@ -4,7 +4,7 @@ A modern, responsive todo list application built with vanilla JavaScript, HTML, 
 
 ---
 
-## 🚀 Live Deployment
+## Live Deployment
 
 **View the application here:** https://todo-list-application2.netlify.app/
 
