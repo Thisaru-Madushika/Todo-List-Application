@@ -10,7 +10,7 @@ A modern, responsive todo list application built with vanilla JavaScript, HTML, 
 
 ---
 
-## 👥 Team Members & Roles
+## Team Members & Roles
 
 | Name (As in LMS) | Student ID | Role |
 | --- | --- | --- |
@@ -19,7 +19,7 @@ A modern, responsive todo list application built with vanilla JavaScript, HTML, 
 
 ---
 
-## 🛠️ Individual Contributions
+## Individual Contributions
 
 ### **A.L.G. Avishka Sankalpani - Lead Developer**
 
@@ -43,7 +43,7 @@ A modern, responsive todo list application built with vanilla JavaScript, HTML, 
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 * **Add Tasks:** Quickly add new items using the input field or by pressing "Enter".
 * **Filter System:** View tasks by status: *All*, *Active*, or *Completed*.
@@ -53,7 +53,7 @@ A modern, responsive todo list application built with vanilla JavaScript, HTML, 
 
 ---
 
-## 🔧 Setup & Installation
+## Setup & Installation
 
 1. **Clone the repository:**
 ```bash
@@ -67,7 +67,7 @@ Open `index.html` in any modern web browser.
 
 ---
 
-## 📂 Project Structure
+# Project Structure
 
 ```text
 Todo List Application/
