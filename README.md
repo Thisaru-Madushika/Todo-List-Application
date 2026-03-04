@@ -67,24 +67,81 @@ Open `index.html` in any modern web browser.
 
 ---
 
-# Project Structure
+# Docker Setup (Optional for DevOps Demonstration)
+
+This project can also be containerized using Docker.
+
+---
+
+## 🔹 Docker Build
+
+```bash
+docker build -t todo-app .
+```
+
+This command builds the Docker image using the `Dockerfile`.
+
+---
+
+## 🔹 Docker Run
+
+```bash
+docker run -d -p 8080:80 --name todo-container todo-app
+```
+
+Access the application at:
+
+```
+http://localhost:8080
+```
+
+To stop the container:
+
+```bash
+docker stop todo-container
+docker rm todo-container
+```
+
+---
+
+## 🔹 Run with Docker Compose
+
+```bash
+docker-compose up --build
+```
+
+---
+
+## 🌍 Environment Variables
+
+This is a **static frontend application**, therefore:
+
+* No environment variables are required.
+* No backend server configuration is needed.
+
+---
+
+# 📁 Project Structure
 
 ```text
-Todo List Application/
+Todo-List-Application/
 ├── .github/
 │   └── workflows/
 │       ├── ci.yml            # CI workflow
 │       └── deploy.yml        # Deployment workflow
-├── src/                      # Source code
+├── src/
 │   ├── index.html            # Main application file
 │   ├── styles/
-│   │   └── style.css         # External stylesheet
+│   │   └── style.css         # Stylesheet
 │   └── scripts/
-│       └── script.js         # Main logic and functionality
-├── .gitignore                # Git ignore file
-├── README.md                 # Complete documentation
-└── package.json              # Project dependencies
-
+│       └── script.js         # Application logic
+├── .gitignore
+├── Dockerfile
+├── docker-compose.yml
+├── README.md
+└── package.json
 ```
+
+
 
 ---
