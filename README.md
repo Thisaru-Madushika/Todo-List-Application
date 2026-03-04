@@ -57,7 +57,7 @@ A modern, responsive todo list application built with vanilla JavaScript, HTML, 
 
 1. **Clone the repository:**
 ```bash
-git clone https://github.com/[username]/[repo].git
+https://github.com/Thisaru-Madushika/Todo-List-Application.git
 
 ```
 
